@@ -1,0 +1,8 @@
+nav
+    a(href="/") Home
+    if user
+        a.navbar(href="/app/add") Write A Review 
+        a.navbar(href="/users/logout") Logout 
+    else
+        a.navbar(href="/users/register") Register 
+        a.navbar(href="/users/login") Login 

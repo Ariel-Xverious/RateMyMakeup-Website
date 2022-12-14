@@ -1,0 +1,10 @@
+extends layout
+    
+block content
+  h1 Reviews
+  br
+  each makeup in makeups 
+    h2
+      a.review(href="/app/" + makeup.id) #{makeup.prodName} 
+    h2 ____________________________________________
+

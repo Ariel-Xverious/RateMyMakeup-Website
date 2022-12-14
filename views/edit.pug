@@ -1,0 +1,35 @@
+extends layout 
+
+block content
+
+    if errors
+        each error in errors 
+            p(style="color:red") #{error.msg}
+
+    h1 Edit Review
+    form(method="POST" action="" id="postform")
+          label Name: 
+            input(name="prodName" class="form-control" type="text")
+            br
+            br
+            label Type Of Product:
+            br
+            input(name="type" type="radio" id='ppp' value= "Skin Care")
+            label Skin Care
+            input(name="type" type="radio" value= "Makeup")
+            label Makeup 
+            br
+            br
+            label Review: 
+            br
+            input(name="review" class="form-control2" type='text')
+            br
+            br
+            label Rating:
+            br
+            input(name="rating" id="one" type="text")
+            label /5 Stars     
+            br
+            br
+            input.btn.btn-primary(type="submit" value="Change Review")
+ 

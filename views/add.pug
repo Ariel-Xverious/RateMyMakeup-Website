@@ -1,0 +1,36 @@
+extends layout
+
+block content
+    h1 Add a Review
+    if errors
+      each error in errors
+        div.add
+        p(style="color:red") #{error.msg}
+    form(method="POST" action="" id="postform")
+        label Name: 
+        input( name="prodName" class="form-control" type="text")
+        br
+        br
+        label Type Of Product:
+        br
+        input(name="type" type="radio" id='ppp' value= "Skin Care")
+        label Skin Care
+        input(name="type" type="radio" value= "Makeup")
+        label Makeup 
+        br
+        br
+        label Review: 
+        br
+        input( name="review" class="form-control2" type='text')
+        br
+        br
+        label Rating:
+        br
+        input(name="rating" id="one" type="text")
+        label /5 Stars     
+        br
+        br
+        input.btn.btn-primary.input-control(type="submit", value="Submit") 
+
+
+  
