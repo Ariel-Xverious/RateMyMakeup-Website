@@ -1,12 +1,14 @@
 extends layout 
 
 block content 
+    
     h1 #{makeup.prodName} 
+    h4 Review Created By: #{user.username}
     h3 Rating: #{makeup.rating}/5 Stars
     h3 Type of Product:  #{makeup.type}
     h3 Review: #{makeup.review}
 
-    h4 UserName: #{user.username}
+   
     br
     br
     if user
